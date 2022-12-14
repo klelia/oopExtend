@@ -3,13 +3,13 @@ require_once __DIR__ . '/Models/User.php';
 require_once __DIR__ . '/Models/PremiumUser.php';
 require_once __DIR__ . '/Models/Membership.php';
 
-$io = new User('Clelia','Fradella',80);
-$io->name = 'Clelia';
+$user = new User('Clelia','Fradella',80);
+$user->name = 'Clelia';
 
-var_dump($io);
-$iomembership = new Membership('Premium', 100, date('d/m/Y'));
-$iopremium = new PremiumUser('Mattia','Rollo',23, $iomembership);
-var_dump($iopremium);
+var_dump($user);
+$usermembership = new Membership('Premium', 100, date('d/m/Y'));
+$userPremium = new PremiumUser('Mattia','Rollo',23, $usermembership);
+var_dump($userPremium);
 
 include __DIR__ . '/partials/header.php';
 include __DIR__ . '/partials/main.php';
